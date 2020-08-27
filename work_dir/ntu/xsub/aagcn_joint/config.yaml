@@ -1,0 +1,53 @@
+base_lr: 0.1
+batch_size: 1
+config: ./config/nturgbd-cross-subject/train_joint_aagcn_small.yaml
+device: 0
+eval_interval: 5
+feeder: feeders.feeder.Feeder
+ignore_weights: []
+log_interval: 100
+model: model.aagcn.Model
+model_args:
+  graph: graph.ntu_rgb_d.Graph
+  graph_args:
+    labeling_mode: spatial
+  num_class: 60
+  num_person: 2
+  num_point: 25
+model_saved_name: ./runs/ntu_cs_aagcn_joint
+nesterov: true
+num_epoch: 3
+num_worker: 1
+only_train_epoch: 5
+only_train_part: true
+optimizer: SGD
+phase: train
+print_log: true
+save_interval: 2
+save_score: false
+seed: 1
+show_topk:
+- 1
+- 5
+start_epoch: 0
+step:
+- 30
+- 40
+test_batch_size: 1
+test_feeder_args:
+  data_path: ./data/ntu/xsub/val_data_joint_2.npy
+  debug: false
+  label_path: ./data/ntu/xsub/val_label_2.pkl
+train_feeder_args:
+  data_path: ./data/ntu/xsub/train_data_joint_10.npy
+  debug: false
+  label_path: ./data/ntu/xsub/train_label_10.pkl
+  normalization: false
+  random_choose: false
+  random_move: false
+  random_shift: false
+  window_size: -1
+warm_up_epoch: 5
+weight_decay: 0.0001
+weights: null
+work_dir: ./work_dir/ntu/xsub/aagcn_joint
