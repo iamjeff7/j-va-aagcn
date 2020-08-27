@@ -9,6 +9,7 @@ The second method is the attention-enhanced adative graph convolution network, w
 The second method supposed to have 2 streams but due time constraints, I was able to test with only one stream (joint)
 
 The codes are mainly from [2s-AGCN]. I convert VA subnetwork of [View Adaptive] from Keras to Pytorch so that it can be integrated with 2s-agcn.
+
 This repository holds the codes and methods for the following papers:
 
 -[Two-Stream Adaptive Graph Convolutional Networks for Skeleton-Based Action Recognition](https://arxiv.org/abs/1805.07694)
