@@ -23,9 +23,11 @@ This repository holds the codes and methods for the following papers:
 
 # Dependencies
 python >= 3.6
+```bash
     $ python -m venv venv
     $ source venv/bin/activate
     $ pip install -r requirements.txt
+```
 
 # Data Preparation
  - Download the raw data from [NTU-RGB+D](https://github.com/shahroudy/NTURGB-D) and [Skeleton-Kinetics](https://github.com/yysijie/st-gcn). Then put them under the data directory:
